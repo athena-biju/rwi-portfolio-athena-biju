@@ -24,6 +24,38 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build portrait asset
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          import re
+
+          chunks = []
+          for name in ("portrait-1.js", "portrait-2.js"):
+              text = Path(name).read_text(encoding="utf-8")
+              match = re.search(r"\+'([^']+)'", text)
+              if not match:
+                  raise RuntimeError(f"Could not decode {name}")
+              chunks.append(match.group(1))
+
+          portrait = base64.b64decode("".join(chunks))
+          Path("athena-portrait.webp").write_bytes(portrait)
+
+          html_path = Path("index.html")
+          html = html_path.read_text(encoding="utf-8")
+          html = html.replace(
+              'src="https://avatars.githubusercontent.com/u/200652830?v=4" alt="Athena Biju"',
+              'src="athena-portrait.webp" alt="Athena Biju"'
+          )
+          html = html.replace(
+              '<meta property="og:image" content="https://avatars.githubusercontent.com/u/200652830?v=4" />',
+              '<meta property="og:image" content="https://athena-biju.github.io/rwi-portfolio-athena-biju/athena-portrait.webp" />'
+          )
+          html_path.write_text(html, encoding="utf-8")
+          PY
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
