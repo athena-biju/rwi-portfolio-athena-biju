@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athena Biju — Investment Research, Macro Strategy & Institutional Systems</title>
+  <meta name="description" content="Athena Biju is an economist and investment researcher working across capital markets, macroeconomic risk, institutional design and quantitative systems." />
+  <meta name="theme-color" content="#f4efe6" />
+  <meta property="og:title" content="Athena Biju — Investment Research & Institutional Strategy" />
+  <meta property="og:description" content="Research on capital, institutions, macroeconomic risk and long-term value." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/200652830?v=4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ivory: #f4efe6;
+      --paper: #fbf8f2;
+      --ink: #1c2220;
+      --navy: #172238;
+      --oxblood: #632d37;
+      --forest: #294638;
+      --sage: #a7b0a2;
+      --gold: #a9874f;
+      --stone: #d8d0c2;
+      --muted: #6b706b;
+      --white: #ffffff;
+      --shell: min(1180px, calc(100vw - 44px));
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Libre Franklin", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-weight: 300;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .shell { width: var(--shell); margin-inline: auto; }
+
+    .eyebrow {
+      margin: 0 0 13px;
+      color: var(--oxblood);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 239, 230, 0.95);
+      border-bottom: 1px solid rgba(28, 34, 32, 0.15);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .crest {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      color: var(--oxblood);
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      font-size: 1.12rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      color: #353a36;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-block: 8px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 2px;
+      height: 1px;
+      background: var(--oxblood);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 180ms ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .nav-cta {
+      padding: 10px 15px !important;
+      color: var(--paper);
+      background: var(--navy);
+      border: 1px solid var(--navy);
+    }
+
+    .nav-cta::after { display: none; }
+
+    .menu-button {
+      display: none;
+      width: 42px;
+      height: 42px;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--stone);
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(244,239,230,0.96) 0%, rgba(244,239,230,0.9) 50%, rgba(244,239,230,0.7) 100%),
+        radial-gradient(circle at 75% 25%, rgba(99,45,55,0.09), transparent 26%),
+        var(--ivory);
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.34;
+      background-image:
+        linear-gradient(rgba(41,70,56,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(41,70,56,0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      min-height: 690px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.72fr);
+      gap: 76px;
+      align-items: center;
+      padding: 80px 0 64px;
+    }
+
+    .hero-copy h1 {
+      max-width: 790px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(4rem, 7vw, 7.4rem);
+      line-height: 0.86;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-copy h1 em {
+      color: var(--oxblood);
+      font-weight: 500;
+    }
+
+    .lede {
+      max-width: 720px;
+      margin: 30px 0 0;
+      color: #4e554f;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 190px;
+      gap: 22px;
+      padding: 14px 17px;
+      border: 1px solid var(--ink);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: var(--paper); background: var(--navy); border-color: var(--navy); }
+    .button-secondary { background: rgba(255,255,255,0.3); }
+    .button-secondary:hover { color: var(--paper); background: var(--oxblood); border-color: var(--oxblood); }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 27px;
+      color: #60675f;
+      font-size: 0.73rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .social-row a:hover { color: var(--oxblood); }
+
+    .portrait-column {
+      position: relative;
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .portrait-frame {
+      position: relative;
+      width: min(100%, 410px);
+      padding: 16px;
+      background: #efe7d9;
+      border: 1px solid var(--gold);
+      box-shadow: 0 28px 70px rgba(50, 45, 36, 0.16);
+    }
+
+    .portrait-frame::before,
+    .portrait-frame::after {
+      content: "";
+      position: absolute;
+      width: 62px;
+      height: 62px;
+      border-color: var(--oxblood);
+      opacity: 0.55;
+    }
+
+    .portrait-frame::before {
+      top: -9px;
+      left: -9px;
+      border-top: 1px solid;
+      border-left: 1px solid;
+    }
+
+    .portrait-frame::after {
+      right: -9px;
+      bottom: -9px;
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      aspect-ratio: 4 / 5.05;
+      object-fit: cover;
+      object-position: center 18%;
+      filter: saturate(0.84) contrast(1.02) sepia(0.08);
+    }
+
+    .portrait-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 14px;
+      color: #535b54;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mandate-strip {
+      color: var(--paper);
+      background: var(--navy);
+    }
+
+    .mandate-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .mandate-item {
+      min-height: 138px;
+      padding: 26px 25px;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .mandate-item:last-child { border-right: 0; }
+    .mandate-item strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.42rem;
+      font-weight: 500;
+    }
+
+    .mandate-item span {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.71rem;
+      line-height: 1.55;
+    }
+
+    .section { padding: 112px 0; }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 84px;
+      align-items: end;
+      margin-bottom: 52px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5.5vw, 5.8rem);
+      line-height: 0.94;
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    .section-heading > div:last-child p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.89rem;
+      line-height: 1.78;
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--stone);
+      border-left: 1px solid var(--stone);
+    }
+
+    .focus-card {
+      min-height: 300px;
+      padding: 32px;
+      border-right: 1px solid var(--stone);
+      border-bottom: 1px solid var(--stone);
+      background: rgba(255,255,255,0.38);
+    }
+
+    .focus-number {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.25rem;
+    }
+
+    .focus-card h3 {
+      margin: 46px 0 15px;
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 1.05;
+      font-weight: 500;
+    }
+
+    .focus-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.72;
+    }
+
+    .archive {
+      color: var(--paper);
+      background: var(--forest);
+    }
+
+    .archive .eyebrow { color: var(--gold); }
+    .archive .section-heading > div:last-child p { color: rgba(255,255,255,0.66); }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.16);
+      border-left: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .project {
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      padding: 38px;
+      border-right: 1px solid rgba(255,255,255,0.16);
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.018);
+      transition: background 180ms ease;
+    }
+
+    .project:hover { background: rgba(255,255,255,0.055); }
+    .project-index { color: rgba(255,255,255,0.34); font-family: var(--serif); font-size: 1.15rem; }
+
+    .project h3 {
+      max-width: 560px;
+      margin: 48px 0 17px;
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      line-height: 1.02;
+      font-weight: 500;
+    }
+
+    .project p {
+      max-width: 590px;
+      margin: 0;
+      color: rgba(255,255,255,0.67);
+      font-size: 0.79rem;
+      line-height: 1.72;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 24px 0 30px;
+    }
+
+    .project-meta span {
+      padding: 7px 9px;
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.16);
+      font-size: 0.61rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .project-link {
+      margin-top: auto;
+      padding-top: 18px;
+      color: var(--gold);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .project-link:hover { color: var(--paper); }
+
+    .experience-list { border-top: 1px solid var(--stone); }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 145px 330px 1fr;
+      gap: 36px;
+      padding: 34px 0;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .period {
+      color: var(--oxblood);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .experience-item h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.72rem;
+      line-height: 1.08;
+      font-weight: 500;
+    }
+
+    .organisation {
+      margin-top: 7px;
+      color: var(--forest);
+      font-size: 0.69rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .experience-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.72;
+    }
+
+    .ledger {
+      background: var(--ivory);
+      border-top: 1px solid var(--stone);
+    }
+
+    .ledger-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .ledger-column { border-top: 1px solid var(--stone); }
+
+    .ledger-item {
+      display: grid;
+      grid-template-columns: 105px 1fr;
+      gap: 24px;
+      padding: 23px 0;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .ledger-item span:first-child {
+      color: var(--gold);
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .ledger-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: var(--serif);
+      font-size: 1.22rem;
+      font-weight: 500;
+    }
+
+    .ledger-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.74rem;
+      line-height: 1.58;
+    }
+
+    .contact {
+      color: var(--paper);
+      background: var(--oxblood);
+      padding: 100px 0 48px;
+    }
+
+    .contact .eyebrow { color: var(--gold); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.22fr 0.78fr;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .contact h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 5.5vw, 6rem);
+      line-height: 0.92;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .contact-links { border-top: 1px solid rgba(255,255,255,0.24); }
+
+    .contact-links a {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 0;
+      color: rgba(255,255,255,0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.24);
+      font-size: 0.76rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .contact-links a:hover { color: var(--gold); }
+
+    .footer-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 58px;
+      padding-top: 22px;
+      color: rgba(255,255,255,0.48);
+      border-top: 1px solid rgba(255,255,255,0.18);
+      font-size: 0.63rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 1060px) {
+      .hero-grid { grid-template-columns: 1fr 0.7fr; gap: 48px; }
+      .mandate-grid { grid-template-columns: repeat(2, 1fr); }
+      .mandate-item:nth-child(2) { border-right: 0; }
+      .mandate-item:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.12); }
+      .focus-grid { grid-template-columns: 1fr 1fr; }
+      .focus-card:last-child { grid-column: 1 / -1; }
+      .ledger-grid { gap: 36px; }
+    }
+
+    @media (max-width: 820px) {
+      .menu-button { display: grid; place-items: center; }
+      .nav-links {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 14px 22px 24px;
+        background: var(--ivory);
+        border-bottom: 1px solid var(--stone);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { width: 100%; padding: 12px 0; }
+      .nav-cta { margin-top: 8px; text-align: center; }
+      .hero-grid,
+      .section-heading,
+      .contact-grid,
+      .ledger-grid { grid-template-columns: 1fr; }
+      .hero-grid { padding-top: 64px; }
+      .portrait-column { min-height: 470px; }
+      .projects { grid-template-columns: 1fr; }
+      .experience-item { grid-template-columns: 1fr; gap: 12px; }
+    }
+
+    @media (max-width: 560px) {
+      :root { --shell: min(100vw - 28px, 1180px); }
+      .hero-copy h1 { font-size: 3.55rem; }
+      .hero-actions { flex-direction: column; }
+      .button { width: 100%; }
+      .mandate-grid,
+      .focus-grid { grid-template-columns: 1fr; }
+      .mandate-item { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+      .focus-card:last-child { grid-column: auto; }
+      .ledger-item { grid-template-columns: 1fr; gap: 7px; }
+      .footer-line { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav shell">
+      <a class="brand" href="#top" aria-label="Athena Biju home">
+        <span class="crest">AB</span>
+        <span>Athena Biju</span>
+      </a>
+
+      <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#focus">Investment focus</a>
+        <a href="#work">Selected research</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="https://github.com/athena-biju" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="nav-cta" href="mailto:athena.biju1711@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-grid shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Investment Research · Macro Strategy · Institutional Systems</p>
+          <h1>Researching capital, institutions and <em>long-term value.</em></h1>
+          <p class="lede">
+            Incoming MSc Economics candidate at the London School of Economics and Political Science.
+            I build rigorous, evidence-led frameworks for understanding markets, institutional risk,
+            capital allocation and the systems through which economic value is created or constrained.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Review selected research <span>→</span></a>
+            <a class="button button-secondary" href="mailto:athena.biju1711@gmail.com">Begin a conversation <span>↗</span></a>
+          </div>
+
+          <div class="social-row">
+            <a href="https://www.linkedin.com/in/athenabiju" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/athena-biju" target="_blank" rel="noreferrer">Research archive ↗</a>
+            <a href="mailto:athena.biju1711@gmail.com?subject=CV%20request">Request CV ↗</a>
+          </div>
+        </div>
+
+        <div class="portrait-column">
+          <figure class="portrait-frame">
+            <img src="https://avatars.githubusercontent.com/u/200652830?v=4" alt="Athena Biju" />
+            <figcaption class="portrait-caption">
+              <span>London · Economics</span>
+              <span>Research · Capital</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="mandate-strip" aria-label="Core orientation">
+      <div class="mandate-grid shell">
+        <article class="mandate-item">
+          <strong>Capital allocation</strong>
+          <span>Valuation, forecasting, downside analysis and investment judgement under uncertainty.</span>
+        </article>
+        <article class="mandate-item">
+          <strong>Macro & regime risk</strong>
+          <span>Economic coercion, institutional opacity, policy transmission and structural market shifts.</span>
+        </article>
+        <article class="mandate-item">
+          <strong>Institutional systems</strong>
+          <span>Governance, regulation, evidence architecture and decision infrastructure.</span>
+        </article>
+        <article class="mandate-item">
+          <strong>Long-horizon research</strong>
+          <span>Research designed for durable judgement rather than short-lived market commentary.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="focus">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Investment orientation</p>
+          <h2>A research practice built for serious capital.</h2>
+        </div>
+        <div>
+          <p>
+            The central question throughout my work is not merely what a model predicts, but what
+            should be believed, underwritten or challenged when incentives, policy and information
+            are imperfect. This is the intellectual basis for work in investment management,
+            private capital, institutional strategy and long-term portfolio construction.
+          </p>
+        </div>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus-card">
+          <span class="focus-number">I</span>
+          <h3>Markets and enterprise value</h3>
+          <p>Financial modelling, capital-market analysis, forecasting and risk decomposition designed to distinguish narrative growth from durable value creation.</p>
+        </article>
+        <article class="focus-card">
+          <span class="focus-number">II</span>
+          <h3>Institutions and regime change</h3>
+          <p>Research on regulation, coercion, strategic opacity, policy and institutional frictions that reshape market structure and investment outcomes.</p>
+        </article>
+        <article class="focus-card">
+          <span class="focus-number">III</span>
+          <h3>Decision systems and evidence</h3>
+          <p>Quantitative and agentic systems that organise fragmented evidence, surface uncertainty and support disciplined human judgement.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section archive" id="work">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected research archive</p>
+            <h2>The work behind the positioning.</h2>
+          </div>
+          <div>
+            <p>
+              The portfolio now foregrounds the projects with the greatest conceptual and technical depth.
+              Each entry links to a public repository containing code, model structures, research logic or
+              institutional-system design.
+            </p>
+          </div>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <span class="project-index">01</span>
+            <h3>Full Financial Data Science Framework</h3>
+            <p>
+              A broad financial-research architecture spanning forecasting, valuation, macro variables,
+              scenario design, model comparison and investment-facing interpretation.
+            </p>
+            <div class="project-meta">
+              <span>Financial modelling</span><span>Forecasting</span><span>Risk</span><span>Python</span>
+            </div>
+            <a class="project-link" href="https://github.com/athena-biju/the-full-financial-data-science-framework" target="_blank" rel="noreferrer">Open repository ↗</a>
+          </article>
+
+          <article class="project">
+            <span class="project-index">02</span>
+            <h3>Behavioural Macro-Friction</h3>
+            <p>
+              A long-panel empirical and theoretical programme studying marriage, labour-market divergence,
+              household position and behavioural macroeconomic frictions through fixed effects, event study,
+              probit and counterfactual methods.
+            </p>
+            <div class="project-meta">
+              <span>Econometrics</span><span>Panel data</span><span>Counterfactuals</span><span>Macro</span>
+            </div>
+            <a class="project-link" href="https://github.com/athena-biju/behavioural-macro-friction" target="_blank" rel="noreferrer">Open repository ↗</a>
+          </article>
+
+          <article class="project">
+            <span class="project-index">03</span>
+            <h3>Governance as Code</h3>
+            <p>
+              A compliance-native financial protocol that treats regulation, institutional permissions
+              and macroprudential policy as executable infrastructure rather than external documentation.
+            </p>
+            <div class="project-meta">
+              <span>RegTech</span><span>Policy as code</span><span>Digital finance</span><span>Systems design</span>
+            </div>
+            <a class="project-link" href="https://github.com/athena-biju/governance-as-code" target="_blank" rel="noreferrer">Open repository ↗</a>
+          </article>
+
+          <article class="project">
+            <span class="project-index">04</span>
+            <h3>Aspasia</h3>
+            <p>
+              A venture-level institutional design for reducing regulatory and valuation friction in
+              cross-border finance, combining compliance logic, financial architecture and strategic positioning.
+            </p>
+            <div class="project-meta">
+              <span>Cross-border capital</span><span>Compliance</span><span>Valuation</span><span>Venture design</span>
+            </div>
+            <a class="project-link" href="https://github.com/athena-biju/aspasia" target="_blank" rel="noreferrer">Open repository ↗</a>
+          </article>
+
+          <article class="project">
+            <span class="project-index">05</span>
+            <h3>Biodiversity Finance Data Landscape</h3>
+            <p>
+              An empirical mapping of biodiversity-finance datasets and institutional evidence using
+              automated collection, natural-language processing and multivocal synthesis.
+            </p>
+            <div class="project-meta">
+              <span>Sustainable finance</span><span>NLP</span><span>Data governance</span><span>Meta-analysis</span>
+            </div>
+            <a class="project-link" href="https://github.com/athena-biju/mlr-biodiversity-finance" target="_blank" rel="noreferrer">Open repository ↗</a>
+          </article>
+
+          <article class="project">
+            <span class="project-index">06</span>
+            <h3>Institutional Research Intelligence</h3>
+            <p>
+              Systems for literature ingestion, semantic retrieval, discourse mapping and governed research
+              curation—built to transform fragmented knowledge into auditable institutional evidence.
+            </p>
+            <div class="project-meta">
+              <span>Research infrastructure</span><span>NLP</span><span>Semantic search</span><span>Governance</span>
+            </div>
+            <a class="project-link" href="https://github.com/athena-biju/green-lit-review" target="_blank" rel="noreferrer">Open repository ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="experience">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Professional formation</p>
+          <h2>Research, markets and policy.</h2>
+        </div>
+        <div>
+          <p>
+            The work spans quantitative research, energy trading, valuation, public-policy analysis,
+            academic infrastructure and teaching. Across each setting, the common discipline is the
+            translation of complex evidence into decisions that can withstand scrutiny.
+          </p>
+        </div>
+      </div>
+
+      <div class="experience-list">
+        <article class="experience-item">
+          <div class="period">2026–2028</div>
+          <div><h3>MSc Economics</h3><div class="organisation">London School of Economics</div></div>
+          <p>Incoming graduate student pursuing advanced training in economic theory, econometrics, macroeconomics and policy analysis.</p>
+        </article>
+
+        <article class="experience-item">
+          <div class="period">2024–2026</div>
+          <div><h3>Research Assistant & Teaching Assistant</h3><div class="organisation">Constructor University</div></div>
+          <p>Research infrastructure, quantitative methods, graduate Probabilities and Environmental & Resource Economics instruction.</p>
+        </article>
+
+        <article class="experience-item">
+          <div class="period">2025</div>
+          <div><h3>Summer Research Intern</h3><div class="organisation">RIS · Ministry of External Affairs, India</div></div>
+          <p>Developed a trade-vulnerability framework combining Bayesian inference, game theory, network analysis, PCA weighting and panel calibration.</p>
+        </article>
+
+        <article class="experience-item">
+          <div class="period">2024–2026</div>
+          <div><h3>Research Analyst · Economic Impact</h3><div class="organisation">KETAAKETI e.V.</div></div>
+          <p>Designed regional poverty and welfare-targeting scorecards and evaluated microfinance and economic-mobility frameworks across countries.</p>
+        </article>
+
+        <article class="experience-item">
+          <div class="period">2024–2025</div>
+          <div><h3>Equity Research Analyst</h3><div class="organisation">Wall Street Oasis</div></div>
+          <p>Developed valuation models, stress-tested investment theses and communicated financial analysis to a broad readership.</p>
+        </article>
+
+        <article class="experience-item">
+          <div class="period">2023–2024</div>
+          <div><h3>Working Student · Data Science & Energy Trading</h3><div class="organisation">EWE Trading GmbH</div></div>
+          <p>Engineered load-forecasting models, automated intraday pipelines and improved operational forecast performance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section ledger" id="credentials">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Credential ledger</p>
+            <h2>Evidence, not ornament.</h2>
+          </div>
+          <div>
+            <p>
+              The site is designed to signal discretion as much as competence. Public repositories and
+              professional records are linked directly; documents containing private identifiers remain
+              available only in redacted form or on request.
+            </p>
+          </div>
+        </div>
+
+        <div class="ledger-grid">
+          <div class="ledger-column">
+            <div class="ledger-item"><span>Education</span><div><strong>BA Global Economics & Management</strong><p>Constructor University · Degree conferred June 2026 · 180 ECTS completed.</p></div></div>
+            <div class="ledger-item"><span>Graduate</span><div><strong>MSc Economics</strong><p>London School of Economics and Political Science · Incoming 2026 cohort.</p></div></div>
+            <div class="ledger-item"><span>Research</span><div><strong>Working papers and empirical projects</strong><p>Trade vulnerability, biodiversity finance, labour-market divergence and institutional systems.</p></div></div>
+          </div>
+
+          <div class="ledger-column">
+            <div class="ledger-item"><span>Code</span><div><strong>Public GitHub archive</strong><p>Macroeconomics, valuation, research infrastructure, NLP and governance systems.</p></div></div>
+            <div class="ledger-item"><span>Methods</span><div><strong>Quantitative and computational</strong><p>Econometrics, forecasting, Monte Carlo, network analysis, NLP, valuation and research engineering.</p></div></div>
+            <div class="ledger-item"><span>Verification</span><div><strong>Documents available on request</strong><p>Privacy-safe CV and redacted academic verification can be provided where appropriate.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <div class="shell">
+      <p class="eyebrow">Correspondence</p>
+      <div class="contact-grid">
+        <h2>For investment research, institutional strategy and serious capital conversations.</h2>
+        <div class="contact-links">
+          <a href="mailto:athena.biju1711@gmail.com"><span>Email</span><span>↗</span></a>
+          <a href="https://www.linkedin.com/in/athenabiju" target="_blank" rel="noreferrer"><span>LinkedIn</span><span>↗</span></a>
+          <a href="https://github.com/athena-biju" target="_blank" rel="noreferrer"><span>GitHub archive</span><span>↗</span></a>
+          <a href="mailto:athena.biju1711@gmail.com?subject=CV%20request"><span>Request CV</span><span>↗</span></a>
+        </div>
+      </div>
+
+      <div class="footer-line">
+        <span>© <span id="year"></span> Athena Biju</span>
+        <span>Investment Research · Macro Strategy · Institutional Systems</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
