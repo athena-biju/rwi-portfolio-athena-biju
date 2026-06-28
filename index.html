@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Athena Biju — Investment Research & Institutional Strategy</title>
+  <meta name="description" content="Athena Biju is an economist and investment researcher working across capital allocation, macroeconomic risk, institutional systems, and quantitative research." />
+  <meta name="theme-color" content="#f5f1e8" />
   <style>
-    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f4efe6}
-    iframe{display:block;width:100%;height:100%;border:0;background:#f4efe6}
-    #loading{position:fixed;inset:0;display:grid;place-items:center;color:#632d37;background:#f4efe6;font:500 18px Georgia,serif;letter-spacing:.04em;z-index:2}
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f5f1e8}
+    iframe{display:block;width:100%;height:100%;border:0;background:#f5f1e8}
+    #loading{position:fixed;inset:0;display:grid;place-items:center;color:#6a3039;background:#f5f1e8;font:500 18px Georgia,serif;letter-spacing:.04em;z-index:2}
   </style>
 </head>
 <body>
@@ -16,19 +18,118 @@
   <script src="portrait-1.js"></script>
   <script src="portrait-2.js"></script>
   <script>
-    const frame=document.getElementById('portfolio');
-    frame.addEventListener('load',()=>{
-      try{
-        const doc=frame.contentDocument;
-        const portrait=doc.querySelector('.portrait-frame img');
-        if(portrait){
-          portrait.src='data:image/webp;base64,'+window.__athenaPortrait;
+    const frame = document.getElementById('portfolio');
+
+    frame.addEventListener('load', () => {
+      try {
+        const doc = frame.contentDocument;
+        if (!doc) return;
+
+        doc.title = 'Athena Biju — Investment Research & Institutional Strategy';
+
+        const preconnect = doc.createElement('link');
+        preconnect.rel = 'preconnect';
+        preconnect.href = 'https://fonts.googleapis.com';
+        doc.head.appendChild(preconnect);
+
+        const fontPreconnect = doc.createElement('link');
+        fontPreconnect.rel = 'preconnect';
+        fontPreconnect.href = 'https://fonts.gstatic.com';
+        fontPreconnect.crossOrigin = 'anonymous';
+        doc.head.appendChild(fontPreconnect);
+
+        const fonts = doc.createElement('link');
+        fonts.rel = 'stylesheet';
+        fonts.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap';
+        doc.head.appendChild(fonts);
+
+        const design = doc.createElement('link');
+        design.rel = 'stylesheet';
+        design.href = 'design-v2.css';
+        doc.head.appendChild(design);
+
+        const portrait = doc.querySelector('.portrait-frame img');
+        if (portrait && window.__athenaPortrait) {
+          portrait.src = 'data:image/webp;base64,' + window.__athenaPortrait;
           portrait.removeAttribute('srcset');
+          portrait.alt = 'Athena Biju';
         }
-        const og=doc.querySelector('meta[property="og:image"]');
-        if(og) og.content='data:image/webp;base64,'+window.__athenaPortrait;
-      }catch(error){console.error(error)}
-      document.getElementById('loading').remove();
+
+        const headline = doc.querySelector('.hero-copy h1');
+        if (headline) {
+          headline.innerHTML = '<span>Researching capital,</span><span>institutions, and</span><span class="headline-accent">long-term value.</span>';
+        }
+
+        const lede = doc.querySelector('.lede');
+        if (lede) {
+          lede.textContent = 'Incoming MSc Economics student at the London School of Economics, with experience across quantitative research, energy trading, policy analysis, and valuation. I build evidence-led frameworks for capital allocation, macro risk, and institutional decision-making.';
+        }
+
+        const mandates = [
+          ['LSE', 'MSc Economics · Incoming 2026 cohort'],
+          ['Constructor University', 'BA Global Economics & Management · 180 ECTS'],
+          ['EWE Trading', 'Data science and short-term power markets'],
+          ['RIS · MEA India', 'Trade vulnerability and strategic economic risk']
+        ];
+        doc.querySelectorAll('.mandate-item').forEach((item, index) => {
+          const data = mandates[index];
+          if (!data) return;
+          const title = item.querySelector('strong');
+          const description = item.querySelector('span');
+          if (title) title.textContent = data[0];
+          if (description) description.textContent = data[1];
+        });
+
+        const focusHeading = doc.querySelector('#focus .section-heading h2');
+        if (focusHeading) focusHeading.textContent = 'Research for capital allocation under uncertainty.';
+
+        const focusCopy = doc.querySelector('#focus .section-heading > div:last-child p');
+        if (focusCopy) {
+          focusCopy.textContent = 'My work examines what should be believed, underwritten, or challenged when information, incentives, and institutions are imperfect. That discipline is directly relevant to investment management, private capital, macro strategy, and long-horizon portfolio construction.';
+        }
+
+        const workHeading = doc.querySelector('#work .section-heading h2');
+        if (workHeading) workHeading.textContent = 'Research, models, and institutional systems.';
+
+        const workCopy = doc.querySelector('#work .section-heading > div:last-child p');
+        if (workCopy) {
+          workCopy.textContent = 'The projects below foreground the work with the greatest technical depth and relevance to capital markets, macroeconomic risk, and institutional decision-making. Each links directly to a public GitHub repository.';
+        }
+
+        const experienceEyebrow = doc.querySelector('#experience .eyebrow');
+        if (experienceEyebrow) experienceEyebrow.textContent = 'Professional experience';
+
+        const credentialsEyebrow = doc.querySelector('#credentials .eyebrow');
+        if (credentialsEyebrow) credentialsEyebrow.textContent = 'Credentials and methods';
+
+        const credentialsHeading = doc.querySelector('#credentials .section-heading h2');
+        if (credentialsHeading) credentialsHeading.textContent = 'Public evidence, presented with discretion.';
+
+        const contactHeading = doc.querySelector('.contact h2');
+        if (contactHeading) contactHeading.textContent = 'Research and investment conversations.';
+
+        const buttons = doc.querySelectorAll('.hero-actions .button');
+        if (buttons[0]) buttons[0].innerHTML = 'View selected work <span>→</span>';
+        if (buttons[1]) {
+          buttons[1].href = 'https://github.com/athena-biju';
+          buttons[1].target = '_blank';
+          buttons[1].rel = 'noreferrer';
+          buttons[1].innerHTML = 'GitHub archive <span>↗</span>';
+        }
+
+        const socialLinks = doc.querySelectorAll('.social-row a');
+        if (socialLinks[1]) socialLinks[1].textContent = 'GitHub archive ↗';
+
+        const og = doc.querySelector('meta[property="og:image"]');
+        if (og && window.__athenaPortrait) {
+          og.content = 'data:image/webp;base64,' + window.__athenaPortrait;
+        }
+      } catch (error) {
+        console.error('Portfolio enhancement failed:', error);
+      } finally {
+        const loading = document.getElementById('loading');
+        if (loading) loading.remove();
+      }
     });
   </script>
 </body>
