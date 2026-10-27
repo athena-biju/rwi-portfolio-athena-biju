@@ -20,14 +20,14 @@ Once GitHub Pages is enabled with **GitHub Actions** as the source, the site wil
 
 The website foregrounds Athena's most substantial public GitHub work:
 
-- Full Financial Data Science Framework
+- MAAT Financial Engine — valuation and startup scenario simulations
 - Behavioural Macro-Friction
 - Governance as Code
 - Aspasia
 - Biodiversity Finance Data Landscape
 - Institutional Research Intelligence
 
-The former Redwire analyst-note page has been removed because it was not representative of the strongest body of work.
+A placeholder-only financial-data framework repository is not featured. Public project links should point to inspectable material, and this site distinguishes research demonstrations from production or investment track records.
 
 ## Public links included
 
