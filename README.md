@@ -9,7 +9,7 @@
 
 | Project | What I investigated | Techniques | What is actually available |
 | --- | --- | --- | --- |
-| [Index-Inclusion Event Study](research/index-inclusion-event-study.md) | Market-model abnormal equity returns and volume around S&P 500 additions | OLS, event windows, cumulative abnormal returns, residual bootstrap | Methodological note summarising an original research notebook; public source release pending |
+| [Index-Inclusion Event Study](research/index-inclusion-event-study.md) | Market-model abnormal equity returns and volume around S&P 500 additions | OLS, event windows, cumulative abnormal returns, residual bootstrap | Research note and [source-only notebook](research/notebooks/sp500-inclusion-eventstudy-exploratory.ipynb) |
 | [US GDP and Financial Uncertainty](research/gdp-uncertainty-var.md) | Whether an uncertainty proxy adds information to quarterly GDP forecasts | FRED, ADF, VAR(5), impulse responses, Granger testing, holdout versus AR(1) | Methodological note summarising an original research notebook; public source release pending |
 | [Unilever Financial Diagnostics](research/unilever-financial-diagnostics.md) | Whether strong operating performance coexists with liquidity risk | SEC/XBRL-style data, financial ratios, peer comparison, sentiment, stress scenarios | Research note based on a **four-author academic group report**; full report not republished |
 
