@@ -3,7 +3,7 @@
 **MSc Economics, London School of Economics (expected 2028)**  
 **Experience:** short-term electricity-market forecasting, equity research, applied economic research, and quantitative teaching.
 
-**Portfolio:** [Browse the research website](https://athena-biju.github.io/rwi-portfolio-athena-biju/) · [Selected investment research](research/README.md) · [All GitHub projects](https://github.com/athena-biju)
+**Portfolio:** [Browse the research website](https://athena-biju.github.io/rwi-portfolio-athena-biju/) · [Selected investment research and supplementary archives](research/README.md) · [All GitHub projects](https://github.com/athena-biju)
 
 ## Featured research: first three items to read
 
