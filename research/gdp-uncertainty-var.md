@@ -36,6 +36,6 @@ The exercise explores the relationship between real activity, financial-market v
 
 Economic data retrieval; frequency aggregation; stationarity; multivariate time-series modelling; forecast benchmarking; statistical interpretation; identification limitations; and research communication.
 
-**Source availability:** Original Jupyter notebook retained by author; full publicly reproducible code is not yet provided in this research index.
+**Source:** [Inspect the source-only exploratory notebook](notebooks/gdp-uncertainty-var-exploratory.ipynb). The original code and research narrative are public without saved outputs; unresolved exploratory VARMAX cells mean it is **not yet a verified end-to-end reproducible release**.
 
 [All selected research](README.md)
