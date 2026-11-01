@@ -16,6 +16,10 @@ This is a concise research index for investment recruiters. It links methods to 
 | How do norm-induced labour frictions affect counterfactual output? | [Behavioural Macro-Friction](https://github.com/athena-biju/behavioural-macro-friction) | Production functions, counterfactual paths, welfare simulation | Public conceptual simulations, not a fully estimated structural OLG model |
 | Can financial transaction decisions be made inspectable? | [ASPASIA](https://github.com/athena-biju/aspasia) | Python, Streamlit, FastAPI, YAML policy rules, decision traces | Public prototype; not a production compliance system |
 
+## Institutional signalling and political economy
+
+- [How Capitalism Abstains — UN voting volatility, abstention and varieties of capitalism](how-capitalism-abstains-institutional-signalling.md) — completed 2025 course paper, documented as a descriptive comparative-political-economy exercise; explains how the separate exploratory V-Dem governance-indicator notebook may inform a later extension, without claiming an established empirical link.
+
 ## Methodological commitments
 
 - Separate **description** from **causal inference**, and **in-sample fit** from **out-of-sample prediction**.
