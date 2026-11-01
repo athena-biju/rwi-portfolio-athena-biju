@@ -26,4 +26,11 @@ This is a concise research index for investment recruiters. It links methods to 
 
 Source-only notebooks are now public for the index-inclusion and GDP–uncertainty projects: [event-study code](notebooks/sp500-inclusion-eventstudy-exploratory.ipynb) and [macro VAR code](notebooks/gdp-uncertainty-var-exploratory.ipynb). These are **archival code snapshots with stored outputs removed**, not verified one-command reproductions. The co-authored Unilever report and its forecasting notebooks are not republished here.
 
+## Supplementary research archives
+
+- [GDELT global geographic graph exploration](notebooks/gdelt-global-graph-source-only.ipynb) — source-only notebook; source manifest and datasets are not bundled.
+- [Stablecoin governance and fragility exploration](notebooks/stablecoin-rule-rigidity-source-only.ipynb) — source-only notebook; exploratory model assumptions and external-data requirements apply.
+
+These supplementary archives have saved outputs removed. They are not independently reproduced empirical findings or investment-performance records.
+
 [Main portfolio](../README.md) · [GitHub account](https://github.com/athena-biju)
