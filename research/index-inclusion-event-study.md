@@ -35,6 +35,6 @@ Index reconstitutions can change mechanical demand, attention and liquidity. An 
 
 Event definition; data joining; expected-return modelling; event-window design; sample-eligibility rules; visualisation; uncertainty quantification; and appropriate caution in translating statistical evidence into an investment claim.
 
-**Source availability:** The full original notebook is retained in the author's research files. A cleaned public source release is pending a separate event-date, licensing and reproducibility review. This page is a methodological research note, not proof of an executable trade.
+**Source:** [Inspect the source-only exploratory notebook](notebooks/sp500-inclusion-eventstudy-exploratory.ipynb). It preserves original code and narrative without cached output, but has **not** been independently re-executed or cleaned for reliable one-click reproduction. Event dates, ticker histories, licensing and execution logic still need review. This is not proof of an executable trade.
 
 [All selected research](README.md)
