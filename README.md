@@ -1,49 +1,44 @@
-# Athena Biju — Investment Research & Institutional Strategy Portfolio
+# Athena Biju | Investment Research & Economic Analysis
 
-A static professional portfolio for Athena Biju, positioned for investment management, private capital, institutional research and long-horizon capital allocation.
+**MSc Economics, London School of Economics (expected 2028)**  
+**Experience:** short-term electricity-market forecasting, equity research, applied economic research, and quantitative teaching.
 
-The visual system translates a restrained continental aesthetic into a professional digital identity: ivory, oxblood, forest green, antique gold, classical typography and editorial spacing. The objective is discretion, seriousness and institutional credibility rather than conspicuous luxury.
+**Portfolio:** [Browse the research website](https://athena-biju.github.io/rwi-portfolio-athena-biju/) · [Selected investment research](research/README.md) · [All GitHub projects](https://github.com/athena-biju)
 
-## Live site
+## Featured research: first three items to read
 
-Once GitHub Pages is enabled with **GitHub Actions** as the source, the site will be available at:
+| Project | What I investigated | Techniques | What is actually available |
+| --- | --- | --- | --- |
+| [Index-Inclusion Event Study](research/index-inclusion-event-study.md) | Market-model abnormal equity returns and volume around S&P 500 additions | OLS, event windows, cumulative abnormal returns, residual bootstrap | Methodological note summarising an original research notebook; public source release pending |
+| [US GDP and Financial Uncertainty](research/gdp-uncertainty-var.md) | Whether an uncertainty proxy adds information to quarterly GDP forecasts | FRED, ADF, VAR(5), impulse responses, Granger testing, holdout versus AR(1) | Methodological note summarising an original research notebook; public source release pending |
+| [Unilever Financial Diagnostics](research/unilever-financial-diagnostics.md) | Whether strong operating performance coexists with liquidity risk | SEC/XBRL-style data, financial ratios, peer comparison, sentiment, stress scenarios | Research note based on a **four-author academic group report**; full report not republished |
 
-**https://athena-biju.github.io/rwi-portfolio-athena-biju/**
+## Directly inspectable GitHub work
 
-## Contents
+- **[MAAT Financial Engine](https://github.com/athena-biju/financial-engine-valuation-simulator):** illustrative operating and valuation scenarios, Monte Carlo and sensitivity analysis. Code is exploratory, not an investment track record; some accounting and valuation assumptions require refinement.
+- **[Behavioural Macro-Friction](https://github.com/athena-biju/behavioural-macro-friction):** simple production-function and welfare simulations involving a norm-induced labour friction. These do not comprise a fully estimated OLG model.
+- **[ASPASIA](https://github.com/athena-biju/aspasia):** traceable policy-rule evaluation with Python, FastAPI and Streamlit demonstrators; not production compliance software.
+- **[Institutional NLP](https://github.com/athena-biju/nlp-institutional-benchmarking):** exploratory sentiment and topic-modelling research involving public discourse and sampling limitations.
+- **[Biodiversity finance data](https://github.com/athena-biju/mlr-biodiversity-finance):** dataset mapping and research-source evaluation.
+- **[Research visualisation](https://github.com/athena-biju/green-lit-review):** exploratory dashboards and literature summaries.
 
-- `index.html` — main portfolio website
-- `.github/workflows/pages.yml` — GitHub Pages deployment workflow
-- `.nojekyll` — serves the static files without Jekyll processing
+## Research philosophy
 
-## Portfolio hierarchy
+The question is not just *what does the model predict?* but *what does the result permit us to conclude?* I separate exploratory analysis from out-of-sample validation; descriptive event studies from tradable returns; and conceptual simulations from empirically identified causal claims.
 
-The website foregrounds Athena's most substantial public GitHub work:
+The site and README are a **research portfolio**, not a record of investments deployed, risk-adjusted trading returns, or a certification that every historical notebook can be rerun unchanged.
 
-- MAAT Financial Engine — valuation and startup scenario simulations
-- Behavioural Macro-Friction
-- Governance as Code
-- Aspasia
-- Biodiversity Finance Data Landscape
-- Institutional Research Intelligence
+## Provenance, attribution and privacy
 
-A placeholder-only financial-data framework repository is not featured. Public project links should point to inspectable material, and this site distinguishes research demonstrations from production or investment track records.
+Group research is identified as such; shared institutional data and proprietary work are not reproduced without clearance. The site does not include private contact details beyond a professional correspondence channel, unredacted academic records, or confidential employer materials. AI assistance has been used in selected technical implementations and documentation as disclosed in individual repositories.
 
-## Public links included
+## Website implementation
 
-- GitHub: https://github.com/athena-biju
-- LinkedIn: https://www.linkedin.com/in/athenabiju
-- Direct links to selected repositories in financial modelling, macroeconomics, institutional systems, biodiversity finance and research infrastructure
+- `site.html` — portfolio content and selected projects.
+- `index.html` — entrance page and display enhancements.
+- `design-v2.css` — site visual styling.
+- `.github/workflows/pages.yml` — GitHub Pages deployment workflow.
 
-## Privacy
+For deployment, enable GitHub Pages with **GitHub Actions** as source and confirm the workflow succeeds. A repository URL being present is not proof that GitHub Pages has been enabled.
 
-The site does not publish an unredacted diploma, transcript, original CV, home address, telephone number, student number or other private identifiers. A privacy-safe CV and redacted academic verification can be supplied on request.
-
-## Deployment
-
-1. Open the repository's **Settings**.
-2. Select **Pages**.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-4. Open the **Actions** tab and confirm that the Pages workflow completes successfully.
-
-Any new commit to `main` will redeploy the website automatically.
+[LinkedIn](https://www.linkedin.com/in/athenabiju) · [GitHub](https://github.com/athena-biju)
