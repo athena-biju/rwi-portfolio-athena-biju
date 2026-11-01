@@ -22,6 +22,10 @@
 - **[Biodiversity finance data](https://github.com/athena-biju/mlr-biodiversity-finance):** dataset mapping and research-source evaluation.
 - **[Research visualisation](https://github.com/athena-biju/green-lit-review):** exploratory dashboards and literature summaries.
 
+## Comparative political economy and geopolitical signalling
+
+[How Capitalism Abstains](research/how-capitalism-abstains-institutional-signalling.md) studies UNGA voting alignment and strategic abstention through a varieties-of-capitalism framework. The accompanying V-Dem governance-indicator notebook is an **exploratory, unpublished extension** rather than the source of the paper's reported UNGA results.
+
 ## Research philosophy
 
 The question is not just *what does the model predict?* but *what does the result permit us to conclude?* I separate exploratory analysis from out-of-sample validation; descriptive event studies from tradable returns; and conceptual simulations from empirically identified causal claims.
