@@ -24,6 +24,6 @@ This is a concise research index for investment recruiters. It links methods to 
 - Respect academic collaborators' authorship and restrictions on institutional datasets.
 - Describe investment implications as **research questions or hypotheses** unless an actionable trade and validation are documented.
 
-The index-inclusion, GDP uncertainty and Unilever notes summarise work from original Jupyter notebooks and a group report. Full cleaned notebook sources have **not** yet been posted in this repository; do not treat these summaries as independently reproducible computational releases.
+Source-only notebooks are now public for the index-inclusion and GDP–uncertainty projects: [event-study code](notebooks/sp500-inclusion-eventstudy-exploratory.ipynb) and [macro VAR code](notebooks/gdp-uncertainty-var-exploratory.ipynb). These are **archival code snapshots with stored outputs removed**, not verified one-command reproductions. The co-authored Unilever report and its forecasting notebooks are not republished here.
 
 [Main portfolio](../README.md) · [GitHub account](https://github.com/athena-biju)
